@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/smtp"
 	"os/exec"
+	"os/user"
 	"strconv"
 	"strings"
 )
@@ -82,6 +83,11 @@ func shutdownPc() {
 	_, err := exec.LookPath(SHUTDOWN)
 	if err != nil {
 		log.Fatal(SHUTDOWN + " not found\nInstall " + SHUTDOWN + " first")
+	}
+
+	user, _ := user.Current()
+	if user.Uid != "0" {
+		log.Fatal("You must to be root to shutdown the pc")
 	}
 
 	cmd := exec.Command(SHUTDOWN, "-h", "now")
