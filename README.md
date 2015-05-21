@@ -19,10 +19,10 @@ I'm a newbie about golang so if you have suggestions, please, let me know!
 * a Gmail account
 
 ## Crontab
-I added the binary to my root crontab file, every 10 minutes cron check if my AC cable is plugged on pc
+I added the binary to my root crontab file, every 5 minutes cron check if my AC cable is plugged on pc
 
 ```sh
-*/10 * * * * DISPLAY=:0.0 /path/to/file
+*/5 * * * * DISPLAY=:0.0 /path/to/file
 ```
 ## License
 MIT
