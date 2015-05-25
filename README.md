@@ -10,7 +10,7 @@ Edit configuration file: `src/config.go`
 ## Why in GoLang ?
 Because I want to learn golang.
 
-## Goopher Newbie
+## Gopher Newbie
 I'm a newbie about golang so if you have suggestions, please, let me know!
 
 ## Requirements
